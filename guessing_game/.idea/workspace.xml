@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="false">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fc147f7f-a42a-438f-b0bb-d51817adf05e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/.fingerprint/guessing_game-2078597125a0e532/bin-guessing_game-2078597125a0e532" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/.fingerprint/guessing_game-2078597125a0e532/bin-guessing_game-2078597125a0e532" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/.fingerprint/guessing_game-2078597125a0e532/bin-guessing_game-2078597125a0e532.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/.fingerprint/guessing_game-2078597125a0e532/bin-guessing_game-2078597125a0e532.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/deps/guessing_game-2078597125a0e532" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/deps/guessing_game-2078597125a0e532" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/guessing_game" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/guessing_game" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/13au4svcrapjrm37.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/15a84y2fshyg05q6.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/161gl9o3l5uhjb2r.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/1lnngzk7rj3mwolw.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/1lx3tp2nxuujmgoo.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/1q5x38qxi3gq6ts3.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/1t2b0bijik5li3wu.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/1whsu03mhti5sh00.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/2gs27aqn91d3e1x4.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/2px2cvawr6stnh4p.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/2vau5cehm9x7esdh.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/32p79c6amyuqbnvn.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/36x6nshp6r59i88n.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/393p32toav5w2ddu.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/39luw1kzobeoeftv.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/3fuu0rx2a493c36v.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/3la8he3lop33dgjs.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/3t2ccuym0pj307il.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/3vn5ay4q0xtqvzv0.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/3xieglqisw4zz0jg.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/4b9gc170vdq5o5mq.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/4fuljosp9ptwm9va.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/4j3u084r76xt4e3y.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/4kib06d7pogun2bq.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/4klr57yodm2y1u97.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/4ldg1uv6wkjen4b6.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/54qmnbhxhqgsn5t4.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/5dvywhq5rku6thec.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/5f95imv579p1ehev.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/5g7gw9qjgeec4z0q.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/gz7ph635sh924q5.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg-3d3vt00f7leg6/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/guessing_game-qabfv3zclm5i/s-f4bl1b507y-fal8eg.lock" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1973010912">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="rs" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Rust" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="rs" value="47" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Rust" value="47" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main.rs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1920" />
+    <option name="y" value="31" />
+    <option name="width" value="1920" />
+    <option name="height" value="2129" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="guessing_game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="guessing_game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="guessing_game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="guessing_game" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Cargo.toml" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc147f7f-a42a-438f-b0bb-d51817adf05e" name="Default Changelist" comment="" />
+      <created>1535592854897</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535592854897</updated>
+      <workItem from="1535592856614" duration="19000" />
+      <workItem from="1535592889167" duration="57000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="76000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="31" width="3840" height="2129" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1230646" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Cargo" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
