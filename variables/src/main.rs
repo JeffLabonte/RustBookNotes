@@ -1,6 +1,6 @@
 fn main() {
 
-    let x = 5;
+    let mut x:i8 = 5;
 
     println!("{}", x);
 
