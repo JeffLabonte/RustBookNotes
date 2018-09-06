@@ -14,6 +14,16 @@ fn main() {
     println!("{}", slice);
 
     s_1.clear(); // Should make it all fail!
+
+     let my_string = String::from("hello world");
+
+     let word_1 = first_word_rev3(&my_string[..]);
+
+     let my_string_literal = "hello world";
+
+     let word_2 = first_word_rev3(&my_string_literal[..]);
+
+     let word_3 = first_word_rev3(my_string_literal); // Since it is &str
 }
 
 fn first_word(s:&String) -> usize {
@@ -30,6 +40,18 @@ fn first_word(s:&String) -> usize {
 
 fn first_word_rev2(s:&String) -> &str {
     let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' '{
+            return &s[..i];
+        }
+    }
+
+    &s[..]
+}
+
+fn first_word_rev3(s: &str) -> &str { // Signature is the only difference!
+    let bytes = s.as_bytes();       //Able to use string literal and String
 
     for (i, &item) in bytes.iter().enumerate() {
         if item == b' '{
