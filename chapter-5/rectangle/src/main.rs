@@ -44,10 +44,10 @@ fn rectangle_rect_way(){
 
     println!(
         "The area of the rectangle is {} square pixels",
-        area_struct(rect1)
+        area_struct(&rect1)
     )
 }
 
-fn area_struct(rect: Rectangle) -> u32{
+fn area_struct(rect: &Rectangle) -> u32{
     rect.width * rect.height
 }
