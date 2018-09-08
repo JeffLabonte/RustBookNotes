@@ -44,10 +44,10 @@ fn rectangle_rect_way(){
 
     println!(
         "The area of the rectangle is {} square pixels",
-        area_struct(&rect1)
+        area_struct(&rect1) // We borrow to keep ownership here!
     )
 }
 
-fn area_struct(rect: &Rectangle) -> u32{
-    rect.width * rect.height
+fn area_struct(rect: &Rectangle) -> u32{ // &Rectangle is borrowed ( Referenced )
+    rect.width * rect.height 
 }
