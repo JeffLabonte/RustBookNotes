@@ -12,12 +12,17 @@ impl Rectangle{
     fn can_hold(&self, other:& Rectangle) -> bool{
         self.width > other.width && self.height > other.height
     }
+
+    fn square(size: u32) -> Rectangle { // Associated function
+        Rectangle{ width: size, height: size }
+    }
 }
 
 fn main() {
     rectangle_variable_way();
     rectangle_tuple_way();
     rectangle_rect_way();
+    create_square(); //Associate functions used
 }
 
 fn rectangle_variable_way(){
@@ -72,4 +77,12 @@ fn rectangle_rect_way(){
 
 fn area_struct(rect: &Rectangle) -> u32{ // &Rectangle is borrowed ( Referenced )
     rect.width * rect.height 
+}
+
+fn create_square(){
+    let sq = Rectangle::square(15);
+
+    println!("This is our square {}", sq.area());
+
+    println!("This is the object {:?}", sq);
 }
