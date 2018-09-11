@@ -80,7 +80,7 @@ fn area_struct(rect: &Rectangle) -> u32{ // &Rectangle is borrowed ( Referenced 
 }
 
 fn create_square(){
-    let sq = Rectangle::square(15);
+    let sq = Rectangle::square(15); // :: is used for namspace and to call associated function
 
     println!("This is our square {}", sq.area());
 
