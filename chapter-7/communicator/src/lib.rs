@@ -6,12 +6,6 @@ mod tests {
     }
 }
 
-mod network{
-    fn connect(){
-    }
-}
+mod client;
 
-mod client{
-    fn connect(){
-    }
-}
+mod network;
