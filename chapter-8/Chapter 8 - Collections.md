@@ -4,6 +4,16 @@
 
 * _Vector_
   * Allow you to store a variable number of values next to each other
+    * Create Vector
+      * `let v:Vector<i32> = Vec::new();` 
+      * ` let v = vec![1,2,3]` 
+        * Inferred i32 since it has i32 values
+    * Update Vector
+      * `v.push(1)`
+        * or the type inferred to the vector
+    * Dropping a vector
+      * A vector is freed when it goes out of scope
+        * Just like most structs
 * _String_
   * A collection of characters
 * _has map_
