@@ -14,6 +14,7 @@
     * Dropping a vector
       * A vector is freed when it goes out of scope
         * Just like most structs
+        * Can get complicated when using references
 * _String_
   * A collection of characters
 * _has map_
