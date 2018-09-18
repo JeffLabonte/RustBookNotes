@@ -18,6 +18,15 @@
   * [For more information on the vector](https://doc.rust-lang.org/stable/nomicon/vec.html)
 * _String_
   * A collection of characters
+  * Information about concat
+    * let s3 = s1 + &s2
+      * The way it concats
+        * s1 is going to be copied to s3
+          * Loose ownership
+            * Unable to use it afterwards
+        * then concat s2 to s1
+          * Which create concat string
+          * s2 can still be used since it has been borrowed (referenced)
 * _has map_
   * Allow you to associate value with a particular key
   * It's a particular implementation of the more general data structure called map
