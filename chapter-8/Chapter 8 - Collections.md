@@ -3,6 +3,8 @@
 
 
 * _Vector_
+  * It has a macro to build it
+    * `vec![1,2,3]`
   * Allow you to store a variable number of values next to each other
     * Create Vector
       * `let v:Vector<i32> = Vec::new();` 
@@ -34,6 +36,9 @@
         * You should do it with `chars()`
           * `for c in "ThisGuy".chars() { println!("{}",c) }`
 * _has map_
+  * Has no macro to build it
+  * Has to be imported
+    * `use std::collection::HashMap`
   * Allow you to associate value with a particular key
   * It's a particular implementation of the more general data structure called map
 
