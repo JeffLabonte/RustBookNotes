@@ -41,6 +41,8 @@
     * `use std::collection::HashMap`
   * Allow you to associate value with a particular key
   * It's a particular implementation of the more general data structure called map
+  * __How to insert when no key__
+    * `scores.entry(String::from("Yellow")).or_insert(50);`
 
 
 

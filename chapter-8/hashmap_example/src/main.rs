@@ -20,7 +20,7 @@ fn main() {
     let field_name = String::from("My favorite Color");
     let field_value = String::from("Blue");
 
-    let score: Option<&i32> = match scores.get(&field_value){
+    let score: Option<&i32> = match scores.get(&field_value){ // Return reference to value! So it only borrow value!
         Some(i) => Some(i),
         None => None
     };
