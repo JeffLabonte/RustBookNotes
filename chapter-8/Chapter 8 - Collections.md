@@ -27,6 +27,12 @@
         * then concat s2 to s1
           * Which create concat string
           * s2 can still be used since it has been borrowed (referenced)
+  * ___CAREFUL___
+    * Not all the character are represented on 1 byte!
+    * It is possible that some letters ( Russian and hindi alphabet) are represented on 2 bytes!
+      * If you want to iterate through a string
+        * You should do it with `chars()`
+          * `for c in "ThisGuy".chars() { println!("{}",c) }`
 * _has map_
   * Allow you to associate value with a particular key
   * It's a particular implementation of the more general data structure called map
