@@ -37,4 +37,15 @@ fn main() {
     // However we could pass the reference of the strings into the map
     // They would still be valid to them here then! But they have to stay "alive" as long as the
     // hashmap hasn't been cleaned up
+    
+    let text = "Hello world wonderful world";
+
+    let mut word_map = HashMap::new();
+
+    for word in text.split_whitespace(){ // Return occurence of word in text
+        let count = word_map.entry(word).or_insert(0); // Return reference to value
+        *count +=1;
+    }
+
+    println!("{:?}", word_map);
 }
