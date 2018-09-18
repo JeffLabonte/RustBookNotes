@@ -15,6 +15,7 @@
       * A vector is freed when it goes out of scope
         * Just like most structs
         * Can get complicated when using references
+  * [For more information on the vector](https://doc.rust-lang.org/stable/nomicon/vec.html)
 * _String_
   * A collection of characters
 * _has map_
@@ -24,3 +25,4 @@
 
 
 [Follow this link to access documenation on collections](https://doc.rust-lang.org/stable/std/collections/)
+
