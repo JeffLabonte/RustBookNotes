@@ -20,4 +20,8 @@ fn main() {
 
     map.insert(field_name, field_value); // At this point the two strings belongs to the hashmap
     // You can't reuse the variables field_name and field_value
+    //
+    // However we could pass the reference of the strings into the map
+    // They would still be valid to them here then! But they have to stay "alive" as long as the
+    // hashmap hasn't been cleaned up
 }
