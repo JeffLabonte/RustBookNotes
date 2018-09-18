@@ -6,6 +6,10 @@ fn main() {
     scores.insert(String::from("Blue"), 10);
     scores.insert(String::from("Yellow"), 50);
 
+    for (key, value) in &scores{
+        println!("{} - {}", key, value);
+    }
+
     let teams = vec![String::from("Blue"), String::from("Yellow")];
 
     let initial_scores = vec![10, 50];
@@ -15,6 +19,15 @@ fn main() {
     
     let field_name = String::from("My favorite Color");
     let field_value = String::from("Blue");
+
+    let score: Option<&i32> = match scores.get(&field_value){
+        Some(i) => Some(i),
+        None => None
+    };
+
+    if score != None {
+        println!("{}", score.unwrap());
+    }
 
     let mut map = HashMap::new();
 
