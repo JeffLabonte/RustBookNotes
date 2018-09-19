@@ -7,6 +7,8 @@ fn main(){
     println!("{:?}", result);
     let result = read_username_concise();
     println!("{:?}", result);
+    let result = read_username_chaining();
+    println!("{:?}", result);
 }
 
 fn read_username_from_file() -> Result<String, io::Error> {
@@ -29,5 +31,11 @@ fn read_username_concise() -> Result<String, io::Error> {
     let mut f = File::open("hello.txt")?;
     let mut s = String::new();
     f.read_to_string(&mut s)?;
+    Ok(s)
+}
+
+fn read_username_chaining() -> Result<String, io::Error> {
+    let mut s = String::new();
+    File::open("hello.txt")?.read_to_string(&mut s)?;
     Ok(s)
 }
