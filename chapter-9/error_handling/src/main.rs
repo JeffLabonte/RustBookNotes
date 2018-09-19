@@ -28,14 +28,14 @@ fn read_username_from_file() -> Result<String, io::Error> {
 }
 
 fn read_username_concise() -> Result<String, io::Error> {
-    let mut f = File::open("hello.txt")?;
+    let mut f = File::open("hello.txt")?; // Can only be used within a function that returns a result
     let mut s = String::new();
-    f.read_to_string(&mut s)?;
+    f.read_to_string(&mut s)?; // Can only be used within a function that returns a result
     Ok(s)
 }
 
 fn read_username_chaining() -> Result<String, io::Error> {
     let mut s = String::new();
-    File::open("hello.txt")?.read_to_string(&mut s)?;
+    File::open("hello.txt")?.read_to_string(&mut s)?; // Can only be used within a function that returns a result
     Ok(s)
 }
