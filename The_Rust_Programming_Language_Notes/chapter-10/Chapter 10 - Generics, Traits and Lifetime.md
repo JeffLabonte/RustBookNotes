@@ -377,3 +377,29 @@ impl<T: Display + PartialOrd> Pair<T> {
 
 > By using a trait bound with an `impl` block that uses generic type parameters, we can implement methods conditionally for types that implement the specified traits. For example, the type `Pair<T>`in Listing 10-16 always implements the `new` function. But `Pair<T>` only implements the `cmp_display` method if its inner type `T` implements the `PartialOrd` trait that enables comparison *and* the `Display` trait that enables printing.
 
+
+
+## Lifetime
+
+> __The Borrow Checker__
+>
+>
+>
+> The Rust compiler has a *borrow checker* that compares scopes to determine whether all borrows are valid. Listing 10-18 shows the same code as Listing 10-17 but with annotations showing the lifetimes of the variables.
+>
+> ```rust
+> {
+>     let r;                // ---------+-- 'a
+>                           //          |
+>     {                     //          |
+>         let x = 5;        // -+-- 'b  |
+>         r = &x;           //  |       |
+>     }                     // -+       |
+>                           //          |
+>     println!("r: {}", r); //          |
+> }                         // ---------+
+> ```
+>
+> Listing 10-18: Annotations of the lifetimes of `r` and `x`, named `'a` and `'b`, respectively
+>
+> Here, we’ve annotated the lifetime of `r` with `'a` and the lifetime of `x` with `'b`. As you can see, the inner `'b` block is much smaller than the outer `'a` lifetime block. At compile time, Rust compares the size of the two lifetimes and sees that `r` has a lifetime of `'a` but that it refers to memory with a lifetime of `'b`. The program is rejected because `'b` is shorter than `'a`: the subject of the reference doesn’t live as long as the reference.
