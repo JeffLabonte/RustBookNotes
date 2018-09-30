@@ -403,3 +403,34 @@ impl<T: Display + PartialOrd> Pair<T> {
 > Listing 10-18: Annotations of the lifetimes of `r` and `x`, named `'a` and `'b`, respectively
 >
 > Here, we’ve annotated the lifetime of `r` with `'a` and the lifetime of `x` with `'b`. As you can see, the inner `'b` block is much smaller than the outer `'a` lifetime block. At compile time, Rust compares the size of the two lifetimes and sees that `r` has a lifetime of `'a` but that it refers to memory with a lifetime of `'b`. The program is rejected because `'b` is shorter than `'a`: the subject of the reference doesn’t live as long as the reference.
+
+_Logic behind the need to change lifetime_
+
+> ```rust
+> fn longest(x: &str, y: &str) -> &str {
+>     if x.len() > y.len() {
+>         x
+>     } else {
+>         y
+>     }
+> }
+> ```
+>
+> Listing 10-21: An implementation of the `longest` function that returns the longer of two string slices but does not yet compile
+>
+> Instead, we get the following error that talks about lifetimes:
+>
+> ```text
+> error[E0106]: missing lifetime specifier
+>  --> src/main.rs:1:33
+>   |
+> 1 | fn longest(x: &str, y: &str) -> &str {
+>   |                                 ^ expected lifetime parameter
+>   |
+>   = help: this function's return type contains a borrowed value, but the
+> signature does not say whether it is borrowed from `x` or `y`
+> ```
+>
+> The help text reveals that the return type needs a generic lifetime parameter on it because Rust can’t tell whether the reference being returned refers to `x` or `y`. Actually, we don’t know either, because the `if` block in the body of this function returns a reference to `x` and the `else` block returns a reference to `y`!
+>
+> When we’re defining this function, we don’t know the concrete values that will be passed into this function, so we don’t know whether the `if` case or the `else` case will execute. We also don’t know the concrete lifetimes of the references that will be passed in, so we can’t look at the scopes as we did in Listings 10-18 and 10-19 to determine whether the reference we return will always be valid. The borrow checker can’t determine this either, because it doesn’t know how the lifetimes of `x` and `y` relate to the lifetime of the return value. To fix this error, we’ll add generic lifetime parameters that define the relationship between the references so the borrow checker can perform its analysis.
