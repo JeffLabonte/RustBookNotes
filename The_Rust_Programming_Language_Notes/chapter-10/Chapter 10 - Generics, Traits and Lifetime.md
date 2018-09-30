@@ -447,3 +447,50 @@ _The way to instanciate a variable with lifetime_
 &'a mut i32 // a mutable reference with an explicit lifetime
 ```
 
+
+
+> Filename: src/main.rs
+>
+> ```rust
+> fn longest<'a>(x: &str, y: &str) -> &'a str {
+>     let result = String::from("really long string");
+>     result.as_str()
+> }
+> ```
+>
+> Here, even though we’ve specified a lifetime parameter `'a` for the return type, this implementation will fail to compile because the return value lifetime is not related to the lifetime of the parameters at all. Here is the error message we get:
+>
+> ```text
+> error[E0597]: `result` does not live long enough
+>  --> src/main.rs:3:5
+>   |
+> 3 |     result.as_str()
+>   |     ^^^^^^ does not live long enough
+> 4 | }
+>   | - borrowed value only lives until here
+>   |
+> note: borrowed value must be valid for the lifetime 'a as defined on the
+> function body at 1:1...
+>  --> src/main.rs:1:1
+>   |
+> 1 | / fn longest<'a>(x: &str, y: &str) -> &'a str {
+> 2 | |     let result = String::from("really long string");
+> 3 | |     result.as_str()
+> 4 | | }
+>   | |_^
+> ```
+>
+> The problem is that `result` goes out of scope and gets cleaned up at the end of the `longest`function. We’re also trying to return a reference to `result` from the function. There is no way we can specify lifetime parameters that would change the dangling reference, and Rust won’t let us create a dangling reference. In this case, the best fix would be to return an owned data type rather than a reference so the calling function is then responsible for cleaning up the value.
+>
+> Ultimately, lifetime syntax is about connecting the lifetimes of various parameters and return values of functions. Once they’re connected, Rust has enough information to allow memory-safe operations and disallow operations that would create dangling pointers or otherwise violate memory safety.
+
+
+
+_The three rules with lifetime annotation_
+
+> The first rule is that each parameter that is a reference gets its own lifetime parameter. In other words, a function with one parameter gets one lifetime parameter: `fn foo<'a>(x: &'a i32)`; a function with two parameters gets two separate lifetime parameters: `fn foo<'a, 'b>(x: &'a i32, y: &'b i32)`; and so on.
+>
+> The second rule is if there is exactly one input lifetime parameter, that lifetime is assigned to all output lifetime parameters: `fn foo<'a>(x: &'a i32) -> &'a i32`.
+>
+> The third rule is if there are multiple input lifetime parameters, but one of them is `&self` or `&mut self` because this is a method, the lifetime of `self` is assigned to all output lifetime parameters. This third rule makes methods much nicer to read and write because fewer symbols are necessary.
+
