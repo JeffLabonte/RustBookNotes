@@ -156,7 +156,7 @@ fn main() {
 
 ## Traits
 
-
+__Description__: A trait can be thought of as a interface in many aspects
 
 The way to implement traits :
 
@@ -172,7 +172,7 @@ pub trait Summary {
 }
 ```
 
-
+It is also possible to set a default behavior by using `{}` instead of `;`.
 
 This is the way to make use of the traits: 
 
@@ -210,4 +210,26 @@ impl Summary for Tweet {
     }
 }
 ```
+
+
+
+__Using traits as argument__
+
+_sugar coated expression :_
+
+```rust
+pub fn notify(item: impl Summary) {
+    println!("Breaking news! {}", item.summarize());
+}
+```
+
+_verbosy expression:_ 
+
+```rust
+pub fn notify<T: Summary>(item: T) {
+    println!("Breaking news! {}", item.summarize());
+}
+```
+
+
 
