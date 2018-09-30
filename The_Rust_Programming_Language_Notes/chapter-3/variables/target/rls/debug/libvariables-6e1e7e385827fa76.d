@@ -1,0 +1,1 @@
+/home/jeff/Dropbox/Development/Projects/Rust_Book/The_Rust_Programming_Language_Notes/chapter-3/variables/target/rls/debug/libvariables-6e1e7e385827fa76.rmeta: /home/jeff/Dropbox/Development/Projects/Rust_Book/The_Rust_Programming_Language_Notes/chapter-3/variables/src/main.rs
