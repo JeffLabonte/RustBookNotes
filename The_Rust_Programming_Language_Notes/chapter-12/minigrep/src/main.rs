@@ -5,9 +5,7 @@ use std::io::prelude::*;
 fn main() {
     let args: Vec<String> = env::args().collect();
 
-    let query = &args[1];
-    let filename = &args[2];
-
+    let (query, filename) = parse_config(&args);
     println!("Searching for {}", query);
     println!("Filename : {}", filename);
 
@@ -15,4 +13,11 @@ fn main() {
         .expect("Something went wrong reading the file");
 
     println!("With text: {}\n", content);
+}
+
+fn parse_config(args: &[String]) -> ( &str, &str ) {
+    let query = &args[1];
+    let filename = &args[2];
+
+    (query, filename)
 }

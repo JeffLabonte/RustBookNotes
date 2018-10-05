@@ -1,0 +1,1 @@
+/home/jeff/Dropbox/Development/Projects/Rust_Book/The_Rust_Programming_Language_Notes/chapter-12/minigrep/target/debug/libminigrep.rlib: /home/jeff/Dropbox/Development/Projects/Rust_Book/The_Rust_Programming_Language_Notes/chapter-12/minigrep/src/lib.rs
