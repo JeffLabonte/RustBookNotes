@@ -9,6 +9,9 @@ struct Config {
 
 impl Config{
     fn new(args: &[String]) -> Config{
+        if args.len() < 3 {
+            panic!("Not enough arguments");
+        }
         let query = args[1].clone(); // TODO Change for a more efficient
         let filename = args[2].clone(); // TODO way
 
