@@ -21,8 +21,8 @@ fn main() {
 }
 
 fn parse_config(args: &[String]) -> Config {
-    let query = args[1].clone();
-    let filename = args[2].clone();
+    let query = args[1].clone(); // TODO Change for a more efficient
+    let filename = args[2].clone(); // TODO way
 
     Config{query, filename}
 }
