@@ -2,6 +2,7 @@ use std::env;
 use std::fs;
 use std::io::prelude::*;
 use std::process;
+use std::error::Error;
 
 struct Config {
     query: String,
@@ -29,13 +30,16 @@ fn main() {
     });
     println!("Searching for {}", config.query);
     println!("Filename : {}", config.filename);
-    run(config);
+    run(config).unwrap_or_else(|err|{
+        println!("There was an error: {}", err);
+        process::exit(1);
+    });
 }
 
-fn run(config: Config){
-    let content = fs::read_to_string(config.filename)
-        .expect("Something went wrong reading the file");
+fn run(config: Config) -> Result<(), Box<dyn Error>>{
+    let content = fs::read_to_string(config.filename)?;
 
     println!("With text: {}\n", content);
 
+    Ok(())
 }
