@@ -30,10 +30,10 @@ fn main() {
     });
     println!("Searching for {}", config.query);
     println!("Filename : {}", config.filename);
-    run(config).unwrap_or_else(|err|{
-        println!("There was an error: {}", err);
+    if let Err(e) = run(config){
+        println!("There was an error: {}", e);
         process::exit(1);
-    });
+    }
 }
 
 fn run(config: Config) -> Result<(), Box<dyn Error>>{ // NOTE dyn (dynamic) Error ( Error trait )
