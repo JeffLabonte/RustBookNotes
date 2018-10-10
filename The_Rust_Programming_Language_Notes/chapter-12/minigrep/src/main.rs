@@ -29,9 +29,13 @@ fn main() {
     });
     println!("Searching for {}", config.query);
     println!("Filename : {}", config.filename);
+    run(config);
+}
 
+fn run(config: Config){
     let content = fs::read_to_string(config.filename)
         .expect("Something went wrong reading the file");
 
     println!("With text: {}\n", content);
+
 }
