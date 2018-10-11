@@ -22,14 +22,16 @@ impl Config{
 pub fn run(config: Config) -> Result<(), Box<dyn Error>>{ // NOTE dyn (dynamic) Error ( Error trait )
     let content = fs::read_to_string(config.filename)?;
 
-    println!("With text: {}\n", content);
+    search(&config.query, &content);
 
     Ok(())
 }
 
 fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str>{
     for line in contents.lines() {
-        println!("{}", line);
+        if line.contains(query){
+            println!("{}", line);
+        }
     }
     vec![]
 }
