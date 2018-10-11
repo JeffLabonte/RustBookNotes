@@ -22,7 +22,9 @@ impl Config{
 pub fn run(config: Config) -> Result<(), Box<dyn Error>>{ // NOTE dyn (dynamic) Error ( Error trait )
     let content = fs::read_to_string(config.filename)?;
 
-    search(&config.query, &content);
+    for line in search(&config.query, &content){ 
+        println!("{}", line);
+    }
 
     Ok(())
 }
