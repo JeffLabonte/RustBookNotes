@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{listings}
 
 \begin{document}
   \begin{titlepage}
@@ -15,6 +16,20 @@
       [0.75cm]
     \end{center}
   \end{titlepage}
-  \section {Crate}
+  \section {Cargo - Compiling}
+  \ \\[2mm]
+  Cargo is handling the compilation optimisation level, it is possible to change the optimisation level \\
+  in the Cargo.toml file. \\
+  \ \\[2mm]
+  There is 2 different compilation mode; one for development and the other for release. Obviously, the one for\\
+  development is the fastest, since we don't really care about the speed of the code we are running in test. \\
+  \ \\[2mm]
+  These are the default values :
+  \begin{lstlisting}
+    [profile.dev]
+    opt-level = 0
 
+    [profile.release]
+    opt-level = 3
+  \end{lstlisting}
 \end{document}
