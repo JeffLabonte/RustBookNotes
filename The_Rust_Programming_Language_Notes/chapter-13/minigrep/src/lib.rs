@@ -1,7 +1,6 @@
 use std::fs;
 use std::env;
 use std::error::Error;
-use std::io::prelude::*;
 
 pub struct Config {
     pub query: String,
@@ -12,7 +11,7 @@ pub struct Config {
 impl Config{
     pub fn new(mut args: std::env::Args) -> Result<Config, &'static str>{
         args.next();
-        let query = match args.next{
+        let query = match args.next(){
             Some(arg) => arg,
             None => return Err("Didn't get the query String"),
         };
