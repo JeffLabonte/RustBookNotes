@@ -24,14 +24,23 @@
  \ \\[2mm]
  It is possible to create a struct that takes in a function ( closure ) \\
  and a variable to store the information returned by the closure \\
+ \ \\[2mm]
  \section{Iterator}
  \ \\[2mm]
- There are miltiple implementations of iterations \\
+ Iterators is a way to create an object that is built to go 
+ through a vector or any other collections. They are known to be 
+ lazy which means they do no effect until they are used.\\
+ Iterators must be spended! \\
+ \ \\[2mm]
+ There are multiple implementations of iterations \\
  \begin{itemize}
      \item The consuming adaptor
          \begin{itemize}
-             \item This one takes ownerships over the data in the iterator 
+             \item This one takes ownerships over the data in the iterator
          \end{itemize}
-     \item 
+     \item The iterator adaptor
+         \begin{itemize}
+             \item Example of implementation : map
+         \end{itemize}
  \end{itemize}
 \end{document}
