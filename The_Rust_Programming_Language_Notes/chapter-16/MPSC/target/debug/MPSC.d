@@ -1,0 +1,1 @@
+/home/jeff/Sync/Development/Projects/Rust_Book/The_Rust_Programming_Language_Notes/chapter-16/MPSC/target/debug/MPSC: /home/jeff/Sync/Development/Projects/Rust_Book/The_Rust_Programming_Language_Notes/chapter-16/MPSC/src/main.rs
