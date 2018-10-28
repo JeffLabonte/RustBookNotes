@@ -1,0 +1,1 @@
+/home/jeff/Sync/Development/Projects/Rust_Book/The_Rust_Programming_Language_Notes/chapter-19/unsafe_examples/target/debug/unsafe_examples: /home/jeff/Sync/Development/Projects/Rust_Book/The_Rust_Programming_Language_Notes/chapter-19/unsafe_examples/src/main.rs
