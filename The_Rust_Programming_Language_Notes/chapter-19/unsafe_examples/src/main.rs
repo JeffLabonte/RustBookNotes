@@ -2,6 +2,14 @@ use std::slice;
 
 static HELLO_WORLD: &str = "Hello, World!";
 
+static mut COUNTER: u32 = 0;
+
+fn add_to_count(inc: u32) {
+    unsafe{
+        COUNTER += inc;
+    }
+}
+
 unsafe fn dangerous() {}
 
 fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]){
@@ -54,4 +62,10 @@ fn main() {
     call_from_c();
 
     println!("Calling the static variable HELLO_WORLD: {}", HELLO_WORLD);
+
+    add_to_count(1000);
+
+    unsafe {
+        println!("COUNTER: {}", COUNTER);
+    }
 }
