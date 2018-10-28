@@ -13,6 +13,10 @@ fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]){
     }
 }
 
+extern "C" {
+    fn abs(input: i32) -> i32;
+}
+
 fn main() {
     let mut num = 5;
 
@@ -36,4 +40,8 @@ fn main() {
 
     assert_eq!(a, &mut [1, 2, 3]);
     assert_eq!(b, &mut [4, 5, 6]);
+
+    unsafe {
+        println!("Value of abs : {}", abs(-3));
+    }
 }
