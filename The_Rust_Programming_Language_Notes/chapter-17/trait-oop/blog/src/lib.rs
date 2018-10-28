@@ -1,5 +1,5 @@
 pub struct Post {
-    state: Option<Box<dyn State>>,
+    state: Option<Box<dyn State>>, // dyn Statement makes it possible to change structs dynamically with other struct implement with the State trait
     content: String,
 }
 
@@ -27,7 +27,7 @@ impl Post {
 }
 
 trait State {
-    fn request_review(self: Box<Self>) -> Box<dyn State>;
+    fn request_review(self: Box<Self>) -> Box<dyn State>; // Self reprensent the Type ( the struct )
 }
 
 struct Draft {}
