@@ -11,8 +11,18 @@ impl Post {
         }
     }
 
-    pub fn add_text(&mut self, text: String) {
+    pub fn add_text(&mut self, text: &str) {
         self.content.push_str(text);
+    }
+
+    pub fn content(&self) -> &str{
+        ""
+    }
+
+    pub fn request_review(&mut self){
+        if let Some(s) = self.state.take() {
+            self.state = Some(self.state.request_review())
+        }
     }
 }
 
