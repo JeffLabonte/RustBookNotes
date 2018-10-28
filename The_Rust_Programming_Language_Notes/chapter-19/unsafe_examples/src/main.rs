@@ -1,5 +1,7 @@
 use std::slice;
 
+static HELLO_WORLD: &str = "Hello, World!";
+
 unsafe fn dangerous() {}
 
 fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]){
@@ -50,4 +52,6 @@ fn main() {
         println!("Value of abs : {}", abs(-3));
     }
     call_from_c();
+
+    println!("Calling the static variable HELLO_WORLD: {}", HELLO_WORLD);
 }
