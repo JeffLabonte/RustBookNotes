@@ -5,7 +5,7 @@ struct Parser<'a>{
 }
 
 impl<'a> Parser<'a> {
-    fn parse(&self) -> Result<(), &str>{
+    fn parse<'a>(&'a self) -> Result<(), &'a str>{
         Err(&self.context.0[1..])
     }
 }
