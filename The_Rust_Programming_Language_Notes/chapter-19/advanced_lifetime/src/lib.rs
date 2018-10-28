@@ -9,3 +9,7 @@ impl<'a> Parser<'a> {
         Err(&self.context.0[1..])
     }
 }
+
+fn parse_context(context: Context) -> Result<(), &str>{
+    Parser { context: &context }.parse()
+}
