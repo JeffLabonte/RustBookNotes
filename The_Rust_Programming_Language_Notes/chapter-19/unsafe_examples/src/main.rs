@@ -17,6 +17,10 @@ extern "C" {
     fn abs(input: i32) -> i32;
 }
 
+pub extern "C" fn call_from_c(){
+    println!("Just called a Rust function in C!");
+}
+
 fn main() {
     let mut num = 5;
 
@@ -44,4 +48,5 @@ fn main() {
     unsafe {
         println!("Value of abs : {}", abs(-3));
     }
+    call_from_c();
 }
