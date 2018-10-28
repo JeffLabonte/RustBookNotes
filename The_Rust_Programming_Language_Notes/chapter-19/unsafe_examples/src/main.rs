@@ -1,12 +1,16 @@
+use std::slice;
+
 unsafe fn dangerous() {}
 
 fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]){
     let len = slice.len();
+    let ptr = slice.as_mut_ptr();
 
     assert!(mid <= len);
-
-    (&mut slice[..mid],
-     &mut slice[mid..])
+    unsafe {
+        (slice::from_raw_parts_mut(ptr, mid),
+        slice::from_raw_parts_mut( ptr.offset(mid as isize), len - mid),)
+    }
 }
 
 fn main() {
@@ -23,7 +27,6 @@ fn main() {
         println!("r2 is : {}", *r2);
         dangerous();
     }
-
 
     let mut v = vec![1, 2, 3, 4, 5, 6];
 
