@@ -1,0 +1,1 @@
+/home/jeff/Sync/Development/Projects/Rust_Book/The_Rust_Programming_Language_Notes/chapter-17/trait-oop/blog/target/debug/libblog.rlib: /home/jeff/Sync/Development/Projects/Rust_Book/The_Rust_Programming_Language_Notes/chapter-17/trait-oop/blog/src/lib.rs
