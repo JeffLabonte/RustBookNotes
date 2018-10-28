@@ -1,5 +1,5 @@
 pub trait Draw{
-    pub draw(&self);
+    fn draw(&self);
 }
 
 /// First iteration of code
@@ -16,7 +16,7 @@ pub trait Draw{
 //}
 
 pub struct Screen<T: Draw>{
-    pub components: Vec<T>.
+    pub components: Vec<T>,
 }
 
 impl<T> Screen <T>
