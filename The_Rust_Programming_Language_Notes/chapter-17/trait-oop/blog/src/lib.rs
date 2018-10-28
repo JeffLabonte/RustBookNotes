@@ -21,7 +21,7 @@ impl Post {
 
     pub fn request_review(&mut self){
         if let Some(s) = self.state.take() {
-            self.state = Some(self.state.request_review())
+            self.state = Some(s.request_review())
         }
     }
 }
