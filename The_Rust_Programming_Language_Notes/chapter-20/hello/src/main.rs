@@ -5,7 +5,7 @@ use std::thread;
 use std::time::Duration;
 
 static HTTP_OK_STATUS:&str = "HTTP/1.1 200 OK\r\n\r\n";
-static HTTP_NOT_FOUND_STATUS:&str = "HTTP/1.1 404 NOT FOUND \r\n\r\n";
+static HTTP_NOT_FOUND_STATUS:&str = "HTTP/1.1 404 NOT FOUND\r\n\r\n";
 
 static HTTP_GET_METHOD:&[u8]  = b"GET / HTTP/1.1\r\n";
 static HTTP_POST_METHOD:&[u8]  = b"POST / HTTP/1.1\r\n";
@@ -16,7 +16,10 @@ fn main() {
 
     for stream in listener.incoming(){
         let stream = stream.unwrap();
-        handle_connection(stream);
+
+        thread::spawn(move ||{
+            handle_connection(stream);
+        });
     }
 }
 
