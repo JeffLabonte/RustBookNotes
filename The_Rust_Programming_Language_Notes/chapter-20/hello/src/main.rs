@@ -2,8 +2,11 @@ use std::io::prelude::*;
 use std::net::{ TcpListener, TcpStream};
 use std::fs;
 
-static GET_METHOD:&[u8]  = b"GET / HTTP/1.1\r\n";
-static NOT_FOUND:&str = "HTTP/1.1 404 NOT FOUND \r\n\r\n";
+static HTTP_OK_STATUS:&str = "HTTP/1.1 200 OK\r\n\r\n";
+static HTTP_NOT_FOUND_STATUS:&str = "HTTP/1.1 404 NOT FOUND \r\n\r\n";
+
+static HTTP_GET_METHOD:&[u8]  = b"GET / HTTP/1.1\r\n";
+static HTTP_POST_METHOD:&[u8]  = b"POST / HTTP/1.1\r\n";
 
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
@@ -17,18 +20,16 @@ fn main() {
 fn handle_connection(mut stream: TcpStream) {
     let mut buffer = [0; 512];
     stream.read(&mut buffer).unwrap();
-    if buffer.starts_with(GET_METHOD) {
-        let contents = fs::read_to_string("hello.html").unwrap();
-        let response = format!("HTTP/1.1 200 OK\r\n\r\n{}", contents);
-
-        stream.write(response.as_bytes()).unwrap();
-        stream.flush().unwrap(); // INFO: Close the stream 
+    let (status_line, filename) = if buffer.starts_with(HTTP_GET_METHOD){
+        (HTTP_OK_STATUS, "hello.html")
     }else{
-        let contents = fs::read_to_string("404.html").unwrap();
-        let response = format!("{}{}", NOT_FOUND, contents);
+        (HTTP_NOT_FOUND_STATUS, "404.html")
+    };
 
-        stream.write(response.as_bytes()).unwrap();
-        stream.flush().unwrap();
-    }
+    let contents = fs::read_to_string(filename).unwrap();
+    let response = format!("{}{}",status_line, contents);
+
+    stream.write(response.as_bytes()).unwrap();
+    stream.flush().unwrap(); // INFO: Close the stream 
 
 }
