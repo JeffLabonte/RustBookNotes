@@ -3,6 +3,7 @@ use std::net::{ TcpListener, TcpStream};
 use std::fs;
 use std::thread;
 use std::time::Duration;
+use hello::ThreadPool;
 
 static HTTP_OK_STATUS:&str = "HTTP/1.1 200 OK\r\n\r\n";
 static HTTP_NOT_FOUND_STATUS:&str = "HTTP/1.1 404 NOT FOUND\r\n\r\n";
@@ -17,13 +18,10 @@ fn main() {
 
     for stream in listener.incoming(){
         let stream = stream.unwrap();
-        
+
         pool.execute(||{
             handle_connection(stream);
-        })
-        //thread::spawn(||{
-        //    handle_connection(stream);
-        //});
+        });
     }
 }
 
