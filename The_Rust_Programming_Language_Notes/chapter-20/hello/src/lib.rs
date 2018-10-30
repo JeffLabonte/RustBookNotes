@@ -3,6 +3,11 @@ use std::sync::mpsc;
 use std::sync::Arc;
 use std::sync::Mutex;
 
+enum Message{
+    NewMessage(Job),
+    Terminate,
+}
+
 trait FnBox{
     fn call_box(self: Box<Self>);
 }
@@ -50,7 +55,7 @@ impl ThreadPool{
     pub fn execute<F>(&self, f: F)
         where F: FnOnce() + Send + 'static{
             let job = Box::new(f);
-            self.sender.send(job).unwrap();
+            self.sender.send(Message(job)).unwrap();
         }
 }
 
@@ -77,9 +82,16 @@ impl Worker{
             loop {
                 let job = receiver.lock().unwrap().recv().unwrap();
 
-                println!("Worker {} got a job; executing.", id);
-
-                job.call_box();
+                match job{
+                    Message::NewMessage(job) => {
+                        println!("Worker {} got a job; executing.", id);
+                        job.call_box();
+                    },
+                    Message::Terminate => {
+                        println!("Worker {} was told to terminate", id);
+                        break;
+                    }
+                }
             }
         });
 
