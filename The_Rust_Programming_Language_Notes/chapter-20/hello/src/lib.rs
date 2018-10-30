@@ -1,7 +1,9 @@
 use std::thread;
+use std::sync::mpsc;
 
 pub struct ThreadPool{
-    threads: Vec<Worker>
+    workers: Vec<Worker>,
+    sender: mpsc::Sender<Job>,
 };
 
 impl ThreadPool{
@@ -16,29 +18,36 @@ impl ThreadPool{
         assert(size > 0);
         let mut threads = Vec::with_capacity(size);
 
+        let (sender, receiver) = mpsc::channel();
+
         for id in 0..size{
-            threads.push(Worker::new(id));
+            workers.push(Worker::new(id, receiver));
         }
 
         ThreadPool{
-            threads
+            workers,
+            sender
         }
     }
 
     pub fn execute<F>(&self, f: F)
         where F: FnOnce() + Send + 'static{
- 
+
         }
 }
 
-pub struct Worker{
+struct Job;
+
+struct Worker{
     id: usize,
     thread: thread::JoinHandle<()>,
 }
 
 impl Worker{
-    fn new(id: usize) -> Worker{
-        let thread = thread::spawn(|| {});
+    fn new(id: usize, receiver: mpsc::Receiver<Job>) -> Worker{
+        let thread = thread::spawn(|| {
+            receiver;
+        });
 
         Worker{
             id,
@@ -46,3 +55,5 @@ impl Worker{
         }
     }
 }
+
+
