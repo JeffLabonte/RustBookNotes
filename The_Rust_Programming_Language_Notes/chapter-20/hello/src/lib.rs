@@ -28,7 +28,7 @@ impl ThreadPool{
     /// # Panics
     ///
     /// The 'new' will panic if size  is 0
-    pub fn new(size: usize) -> Result<ThreadPool, PoolCreationError>{
+    pub fn new(size: usize) -> ThreadPool{
         assert!(size > 0);
 
         let mut workers = Vec::with_capacity(size);

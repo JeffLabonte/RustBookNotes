@@ -1,0 +1,1 @@
+/home/jeff/Sync/Development/Projects/Rust_Book/The_Rust_Programming_Language_Notes/chapter-20/hello/target/debug/libhello.rlib: /home/jeff/Sync/Development/Projects/Rust_Book/The_Rust_Programming_Language_Notes/chapter-20/hello/src/lib.rs
