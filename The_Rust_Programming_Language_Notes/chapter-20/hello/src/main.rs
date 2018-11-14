@@ -1,8 +1,11 @@
+extern crate hello;
+
 use std::io::prelude::*;
 use std::net::{ TcpListener, TcpStream};
 use std::fs;
 use std::thread;
 use std::time::Duration;
+use std::str;
 use hello::ThreadPool;
 
 static HTTP_OK_STATUS:&str = "HTTP/1.1 200 OK\r\n\r\n";
@@ -16,7 +19,7 @@ fn main() {
     let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
     let pool = ThreadPool::new(4);
 
-    for stream in listener.incoming().take(2){
+    for stream in listener.incoming(){
         let stream = stream.unwrap();
 
         pool.execute(||{
@@ -30,6 +33,11 @@ fn main() {
 fn handle_connection(mut stream: TcpStream) {
     let mut buffer = [0; 512];
     stream.read(&mut buffer).unwrap();
+
+    if let Ok(s) = str::from_utf8(&buffer) {
+        println!("{}", s);
+    }
+
     let (status_line, filename) = if buffer.starts_with(HTTP_GET_METHOD){
         (HTTP_OK_STATUS, "hello.html")
     } else if buffer.starts_with(HTTP_SLEEP_METHOD){

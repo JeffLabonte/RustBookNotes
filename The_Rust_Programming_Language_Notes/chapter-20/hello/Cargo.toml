@@ -2,6 +2,5 @@
 name = "hello"
 version = "0.1.0"
 authors = ["Jeff Labonte <jeff.labonte12@gmail.com>"]
-edition = "2018"
 
 [dependencies]
